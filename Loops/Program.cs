@@ -4,7 +4,17 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int text = 0;
+            string fullName = "";
+            do 
+            { 
+                Console.WriteLine("Enter your name: ");
+                string input = Console.ReadLine();
+                text += input.Length;
+                fullName += input;
+            } 
+            while (text < 20);
+            Console.WriteLine("Hello Your full name was " + fullName);
         }
     }
 }
