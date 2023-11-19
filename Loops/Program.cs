@@ -4,17 +4,17 @@
     {
         static void Main(string[] args)
         {
-            int text = 0;
-            string fullName = "";
-            do 
-            { 
-                Console.WriteLine("Enter your name: ");
-                string input = Console.ReadLine();
-                text += input.Length;
-                fullName += input;
-            } 
-            while (text < 20);
-            Console.WriteLine("Hello Your full name was " + fullName);
+            Console.WriteLine("Please enter what grade you are in (1-4) in highschool");
+            string grade = Console.ReadLine();
+            int numberGrade = int.Parse(grade);
+            while (numberGrade < 1 || numberGrade > 4)
+            {
+                Console.WriteLine("Invalid please enter a valid grade number");
+                Console.WriteLine("Please enter what grade you are in (1-4) in highschool");
+                grade = Console.ReadLine();
+                numberGrade = int.Parse(grade);
+            }
+            Console.WriteLine("You entered a valid grade number of " + numberGrade);
         }
     }
 }
