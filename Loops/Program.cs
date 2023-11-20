@@ -6,28 +6,39 @@ namespace Loops
     {
         static void Main(string[] args)
         {
-
-            ForLoop();
-            WhileLoop();
+            Run();
         }
-        public static void ForLoop() { 
-            for(int i = -3; i <= 3; i++)
-            {
-                Console.WriteLine(i);
+
+        public static void Run()
+        {
+            int i = -10;
+
+            while (true) {
+                for (int counter = i; counter < 11; counter++)
+                {
+                    if (counter % 3 == 0)
+                    {
+                        continue;
+                    }
+                    Console.WriteLine(counter);
+                }
+                if (i == 11)
+                {
+                    Console.WriteLine(" FINAL BREAK REACHED! This should not happen!");
+                    break;
+                }
+               
+                break;
             }
+
+
+                
+
+                
+               
+
+
             
         }
-        public static void WhileLoop()
-        {
-            int num = 3;
-            while(num < 4 && num > -4)
-            {
-              
-                Console.WriteLine(num);
-                num--;
-
-            }
-        }
-        
     }
 }
